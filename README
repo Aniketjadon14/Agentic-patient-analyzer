@@ -1,0 +1,35 @@
+# Anginx Patient Analyser
+
+## Setup
+
+## Python version 
+
+```Python version required 3.10 ```
+
+## create virtual environment   
+```bash
+python3.10 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Environment Variables
+
+Create a `.env` file in the project root with the following (edit values as needed):
+
+```
+DATABASE_URL=your_postgres_connection_string
+OPENAI_API_KEY=your_openai_api_key
+```
+
+## Running the Project
+
+```bash
+python main.py
+```
+
+---
+
+**Tip:**  
+- Make sure your database is running and accessible.
+- For query response visualization, see the scripts and instructions in this repo.
