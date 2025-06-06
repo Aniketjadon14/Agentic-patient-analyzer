@@ -1,0 +1,19 @@
+digraph {
+	user_input
+	generate_sql
+	Suggest_Questions
+	query_db
+	check_abnormal
+	summarize
+	alert
+	user_input -> generate_sql
+	check_abnormal -> summarize
+	__start__ -> user_input
+	summarize -> Suggest_Questions
+	Suggest_Questions -> __end__
+	alert -> __end__
+	query_db -> check_abnormal
+	generate_sql -> query_db
+	summarize -> alert
+	Suggest_Questions -> user_input [label="on suggestion click" style=dashed]
+}
