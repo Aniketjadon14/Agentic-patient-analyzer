@@ -1,12 +1,17 @@
 from dotenv import load_dotenv
 from graph import patient_graph
-from dotenv import load_dotenv
-load_dotenv()
+from state import PatientVisitState
 
 load_dotenv()
-
+  
 if __name__ == "__main__":
-    input_text = "give me the count of patients at  riskLevel High Risk"
-    result = patient_graph.invoke({"input": input_text})
+    input_text =  "give me the address   for  patientId 402?"
+    
+
+    state: PatientVisitState = PatientVisitState(
+        input=input_text
+    )
+    
+    result = patient_graph.invoke(state)
     print("=== FINAL RESULT ===")
     print(result)
